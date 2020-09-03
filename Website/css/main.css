@@ -55,5 +55,5 @@ div {
 }
 
 span {
-    text-emphasis-style: circle;
+    font-weight: bold;
 }
