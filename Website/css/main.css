@@ -53,3 +53,7 @@ div {
    
     color: rgb(94, 58, 88)
 }
+
+span {
+    text-emphasis-style: bold;
+}
