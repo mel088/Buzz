@@ -50,6 +50,6 @@ class/id attributes to set properties of only certain tags
 this is a comment and is ignored
 */
 div {
-    display: block;
+   
     color: gray
 }
