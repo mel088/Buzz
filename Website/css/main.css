@@ -55,6 +55,6 @@ div {
 }
 
 span {
-    font-weight: bold;
+    background-color: rgb(255, 228, 250);
     font-style:italic;
 }
