@@ -28,6 +28,10 @@ li {
     padding: 15px;
 }
 
+a {
+    color: black
+}
+
 /* menu is a class or "true class" */
 a.menu {
     color: white;
@@ -50,7 +54,7 @@ class/id attributes to set properties of only certain tags
 this is a comment and is ignored
 */
 div {
-   
+
     color: rgb(94, 58, 88)
 }
 
