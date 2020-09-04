@@ -62,3 +62,7 @@ span {
     background-color: rgb(255, 228, 250);
     font-style:italic;
 }
+
+p.special {
+    font-style:italic
+}
