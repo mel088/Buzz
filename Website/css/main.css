@@ -66,3 +66,7 @@ span {
 p.special {
     font-style:italic
 }
+
+p.insta {
+    background-color: pink;
+}
