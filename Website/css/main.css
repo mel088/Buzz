@@ -58,6 +58,12 @@ div {
     color: rgb(94, 58, 88)
 }
 
+@media screen and (max-width: 600px) {
+    div {
+      display: none;
+    }
+  }
+
 span {
     background-color: rgb(255, 228, 250);
     font-style:italic;
