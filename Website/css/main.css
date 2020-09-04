@@ -9,11 +9,6 @@ body {
     width: 1000px; /* many units for width */
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-      width: 500px;
-    }
-
 h1 {
     text-align: center;
 }
@@ -73,5 +68,5 @@ p.special {
 }
 
 p.insta {
-    background-color: pink;
+    background-color: red;
 }
