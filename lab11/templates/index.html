@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+        {% if username %}
+        <h2>welcome <b>{{username}}</b></h2>
+        {% else %}
+        <h2>homepage</h2>
+        {% endif %}
+{% endblock %}
+
+{% block content %}
+        <p>
+       
+        </p>
+        <table style="border: 1px solid lightgray;border-radius: 3px; padding-left: 12px;">
+            <td><sub>user</sub></td><td><sub>message</sub></td><td><sub style="color:slategrey;padding:14px;">time created</sub></td>
+        {% for message in messages %}
+        <tr class="hover"><td style="font: 12px Helvetica;font-weight: bold;">{{message.username}}</td><td style="font: 16px Helvetica;">{{ message.text }}</td><td><sub style="color:slategrey;padding:14px;font: 12px Helvetica;">{{ message.created_at }}</sub></td><td>{% if username==message.username %}<a class="edit" href='/edit_message/{{message.id}}'>edit</a></td><td><a class="edit" href='/delete_message/{{message.id}}'>delete</a></td></tr>{% endif %}
+        {% endfor %}
+        </table>
+{% endblock %}
