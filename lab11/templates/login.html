@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+        <h2>login</h2>
+{% endblock %}
+
+{% block content %}
+
+        {% if login_successful %}
+        <h1 class="success">successfully logged in!</h1>
+        {% endif %}
+
+        {% if login_unsuccessful %}
+        <h1 class="fail">username/password not found</h1>
+        {% endif %}
+
+        {% if login_default or login_unsuccessful %}
+        <form action=/login method=POST style="margin: 55px;">
+            <table>
+                <tr><td>username</td><td><input type=text name=username></td></tr>
+                <tr><td>password</td><td><input type=password name=password></td></tr>
+            </table>
+            <input type=submit value='log in'>
+        </form>
+        {% endif %}
+{% endblock %}
