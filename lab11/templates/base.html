@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>buzz</title>
+        <link rel="stylesheet" href='/static/style.css'>
+    </head>
+    <body>
+        {% if username %}
+        <h1><a rel="follow" href='/'><img src="{{url_for('static', filename='buzz.png')}}" style="width:240;height:85;" alt="Buzz icon"/></a></h1>
+        {% else %}
+        <h1><a rel="follow" href='/login'><img src="{{url_for('static', filename='buzz.png')}}" style="width:240;height:85;" alt="Buzz icon"/></a></h1>
+        {% endif %}
+        <nav>
+            <ol>
+                <a href='/'><li>home</li></a>
+                {% if username %}
+                <!--<li><a href='/'>home</a></li>-->
+                <a rel="follow" href='/logout'><li>logout</li></a>
+                <a href='/create_message'><li>buzz</li></a>
+                <a href='/delete_user/{{username}}'><li>delete user</li></a>
+                {% else %}
+                <a href='/login'><li>login</li></a>
+                <a href="/create_user"><li>create user</li></a>
+                {% endif %}
+            </ol>
+        </nav>
+        {% block title %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
