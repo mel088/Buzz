@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}
+        <h2>create user</h2>
+{% endblock %}
+
+{% block content %}
+
+        {% if create_user_successful %}
+        <h1 class="success">successfully created a user!</h1>
+        {% endif %}
+
+        {% if create_user_unsuccessful %}
+        <h1 class="fail">passwords don't match, please try again</h1>
+        {% endif %}
+
+        {% if user_already_exists %}
+        <h1 class="fail">user already exists</h1>
+        {% endif %}
+
+        {% if create_user_default or create_user_unsuccessful or user_already_exists %}
+        <form action=/create_user method=POST>
+            <table>
+                <tr><td>username</td><td><input type=text name=username></td></tr>
+                <tr><td>password</td><td><input type=password name=password></td></tr>
+                <tr><td>confirm password</td><td><input type=password name=password2></td></tr>
+            </table>
+            <input type=submit value='create user'>
+        </form>
+        {% endif %}
+{% endblock %}
