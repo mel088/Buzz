@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+        <h2>buzz something</h2>
+{% endblock %}
+
+{% block content %}
+        {% if message_successful %}
+        <h1 class="success">message created!</h1>
+        {% endif %}
+
+        {% if message_unsuccessful %}
+        <h1 class="fail">failed to create message</h1>
+        {% endif %}
+
+        {% if message_default or message_unsuccessful %}
+        <form action=/create_message method=POST style="margin: 55px;">
+            <table>
+                <tr><td><b>{{username}}</b> says</td><td><input type=text name=message></td></tr>
+            </table>
+            <input type="submit" value='post'>
+        </form>
+        {% endif %}
+{% endblock %}
