@@ -1,6 +1,5 @@
 # ![Buzz](https://github.com/mel088/Buzz/blob/master/lab11/static/buzz.png)
-# Buzz
-## My Microblogging Messaging Platform
+## Buzz: My Microblogging Messaging Platform
 
 You can check out my source code for my twitter-like messaging platform in the folder [Lab11](https://github.com/mel088/Buzz/tree/master/lab11/templates).
 
